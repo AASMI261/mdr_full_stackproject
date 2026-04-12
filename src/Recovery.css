@@ -1,0 +1,163 @@
+
+body { 
+    margin: 0; 
+    padding: 20px; 
+    background: #f2f2f2; 
+    font-family: Arial, sans-serif; 
+    } 
+    
+h2 { 
+    text-align: center; 
+    margin-bottom: 20px;
+} 
+     
+.summary-cards { 
+    display: grid; 
+    grid-template-columns:
+     repeat(auto-fit, minmax(200px,1fr)); 
+    gap: 15px; 
+    margin-bottom: 25px; 
+    } 
+        
+.card { 
+     background: white; 
+    border-radius: 12px; 
+    padding: 15px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    text-align: center;
+} 
+.card h4 { 
+    margin: 5px 0; 
+} 
+        
+.card p { 
+     margin: 0; 
+     font-weight: bold; 
+     font-size: 18px;
+} 
+         
+.filters { 
+    text-align: center;
+    margin-bottom: 20px;
+} 
+             
+.filters button { 
+    padding: 8px 15px; 
+    margin: 5px; border: none; 
+    border-radius: 8px; 
+    background: #005bbb; 
+    color: white; 
+    cursor: pointer; 
+    font-size: 14px; 
+} 
+.filters button:hover {
+    background: #004799;
+}
+                 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); 
+    gap: 20px; 
+    margin-bottom: 40px; 
+} 
+                    
+.patient-box {
+    background: white; 
+    border-radius: 12px;
+    padding: 15px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+} 
+.title { 
+    font-size: 18px; 
+    font-weight: bold; 
+    margin-bottom: 10px; 
+    color: #333;
+} 
+.info-grid { 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px; 
+} 
+.info { 
+    background: #eef6ff; 
+    padding: 8px; 
+    border-radius: 8px;
+    font-size: 13px;
+} 
+.info.predictedHigh {
+    background: #FFCCCC;
+} 
+.info.predictedMedium {
+    background: #FFF4CC; 
+} 
+.info.predictedLow { 
+    background: #CCFFCC;
+} 
+.chart-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.chart-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.chart-container { 
+    background: white; 
+    border-radius: 12px; 
+    padding: 15px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    text-align: center; 
+    height: 250px; 
+} 
+
+.chart-container canvas {
+  height: 100% !important; /* Make canvas fill container */
+}
+
+.conclusion-box { background: #fffae6; 
+    border-left: 5px sol
+    id #ffc107;
+     padding: 12px; 
+     margin-top: 10px; 
+     font-weight: bold; 
+     text-align: center; 
+     border-radius: 8px; 
+    }
+/* =============================
+   TOP FOUR BOXES DESIGN
+============================= */
+
+.top-box-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+}
+
+.top-box {
+  flex: 1;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  min-width: 220px;
+}
+
+.top-box h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.top-box p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}

@@ -1,0 +1,80 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 280px;
+  background: #6197e8;
+  color: white;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  padding: 12px 20px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.menu li:hover {
+  background-color: #9db9e6; /* hover effect */
+  cursor: pointer;
+}
+
+.menu li.active {
+  background-color: #2563eb; /* highlighted color for current page */
+  font-weight: bold;
+}
+
+.menu li a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar {
+  width: 280px;          /* increased width */
+  left: -280px;           /* hidden position matches width */
+  transition: left 0.3s;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.profile-box {
+  text-align: center;
+  padding: 15px 10px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.profile-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-name {
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: bold;
+}

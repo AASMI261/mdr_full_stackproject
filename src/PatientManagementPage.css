@@ -1,0 +1,114 @@
+/* PatientManagementPage.css */
+
+/* Main container */
+.details-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  background-color: #f7f9fc;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+.details-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #333;
+}
+
+/* Grid for form fields */
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px 30px;
+}
+
+/* Label and input container */
+.details-grid label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Input fields */
+.details-grid input,
+.details-grid textarea {
+  margin-top: 6px;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Textarea adjustments */
+.details-grid textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+
+/* Focus effect */
+.details-grid input:focus,
+.details-grid textarea:focus {
+  outline: none;
+  border-color: #3f51b5;
+  box-shadow: 0 0 5px rgba(63, 81, 181, 0.3);
+}
+
+/* Buttons container */
+.button-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+  gap: 15px;
+}
+
+/* Buttons */
+.button-row button {
+  padding: 10px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+/* Save/Add button */
+.button-row button:last-child {
+  background-color: #3f51b5;
+  color: white;
+}
+
+.button-row button:last-child:hover {
+  background-color: #303f9f;
+}
+
+/* Cancel button */
+.button-row button:first-child {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.button-row button:first-child:hover {
+  background-color: #d5d5d5;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .button-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button-row button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,269 @@
+/* Root wrapper */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.app-root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===========================
+   HEADER SECTION
+   =========================== */
+.header-content {
+  position: relative;
+  text-align: center;
+  padding: 20px 0;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+/* Title */
+.header-content h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-left: 37%;
+}
+
+.header-content h3 {
+  margin: 5px 0 20px;
+  font-size: 30px;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+/* ===========================
+   HAMBURGER BUTTON
+   =========================== */
+.hamburger-btn {
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  z-index: 1100; /* above sidebar */
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+.hamburger-line {
+  width: 22px;
+  height: 3px;
+  background-color: black;
+  border-radius: 2px;
+}
+
+/* ===========================
+   FOUR BOXES
+   =========================== */
+/* Container of all boxes */
+.boxes-container {
+  display: grid;
+  grid-template-columns: repeat(5, 3fr);
+  gap: 2px;
+  margin: 20px 0;
+}
+
+/* Each box */
+.role-box {
+  width: 300px;
+  height: 130px;
+  padding: 30px;
+
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* Hover effect */
+.role-box:hover {
+  border-color: #0d6efd;
+  background: #e9f4ff;
+}
+
+/* Label text */
+.role-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 9px;
+}
+
+/* Number inside box */
+.role-label::after {
+  content: attr(data-count);
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  margin-top: 9px;
+}
+
+/* Responsive (mobile) */
+@media (max-width: 992px) {
+  .boxes-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .boxes-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ===========================
+   PATIENT TABLE SECTION
+   =========================== */
+.patient-table-section {
+  width: 90%;
+  margin: auto;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.table-header h2 {
+  margin: 0;
+}
+
+.add-btn {
+  padding: 8px 14px;
+  background: #2a6df4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ===========================
+   TABLE STYLING
+   =========================== */
+.patient-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.patient-table thead {
+  background: #f0f0f0;
+}
+
+.patient-table th,
+.patient-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.update-btn {
+  padding: 6px 12px;
+  background: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.page-title {
+  flex: 1;
+  text-align: center;
+}
+
+.notification-wrapper {
+  margin-left: 0px; /* push to right */
+}
+
+.search-filters {
+  display: flex;
+  gap: 10px; /* space between inputs */
+  margin-bottom: 15px;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-filters input {
+  flex: 1; /* both inputs take equal width */
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+
+.search-bar input:focus {
+  border-color: #000000;
+  outline: none;
+}
+.header-right {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  gap: 18px; /* space between bell & phone */
+}
+
+/* Phone icon size same as notification bell */
+.phone-icon {
+  font-size: 26px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.phone-icon:hover {
+  transform: scale(1.15);
+}
+.add-btn {
+  margin-left: auto !important;
+  display: block;
+  margin-right: 20px;
+}
+.call-icon-box {
+  width: 50px;
+  height: 50px;
+  font-size: 22px;
+  border-radius: 15px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 20px;
+  right: 75px;
+
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+  transition: 0.2s;
+}
+
+.call-icon-box:hover {
+  background: #f7f7f7;
+  transform: scale(1.1);
+}

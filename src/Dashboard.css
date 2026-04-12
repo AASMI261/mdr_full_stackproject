@@ -1,0 +1,272 @@
+/* 🌐 GLOBAL */
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f9;
+}
+
+/* 🔹 APP LAYOUT */
+.app-root {
+  padding: 20px;
+}
+
+.header-content {
+  width: 100%;
+}
+
+.page {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ☰ HAMBURGER */
+/* HAMBURGER BUTTON */
+.hamburger-btn {
+  position: fixed;
+  top: 22px;
+  left: 22px;
+  width: 32px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 3000;
+}
+
+/* 3 LINES */
+.hamburger-btn span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: #2563eb;   /* 🔵 COLOR yaha change karo */
+  border-radius: 3px;
+  transition: 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.hamburger-btn:hover span {
+  background-color: #1e40af;   /* hover color */
+}
+
+
+/* 🔹 HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #2c3e50;
+}
+
+.search {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 220px;
+}
+
+.profile {
+  width: 36px;
+  height: 36px;
+  background: #bbb;
+  border-radius: 50%;
+}
+
+/* 🔹 COMMON CARD */
+.card {
+  border-radius: 12px;
+  padding: 16px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* 🎙️ VOICE BOT CARD */
+.voice-card {
+  margin-bottom: 24px;
+}
+
+.voice-card h3 {
+  margin-top: 0;
+  color: #1f4fd8;
+}
+
+.voice-card button {
+  margin-top: 12px;
+  padding: 10px 18px;
+  font-size: 15px;
+  background: #1f4fd8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.voice-card button:disabled {
+  background: #dacdcd;
+  cursor: not-allowed;
+}
+
+.answer-text {
+  background: #f1f5ff;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 6px;
+}
+
+/* 🔢 SUMMARY CARDS (ONE LINE FIX) */
+.cards {
+  display: flex;
+  gap: 16px;
+  margin: 20px 0;
+  flex-wrap: nowrap;
+}
+
+.cards .card {
+  flex: 1;
+  text-align: center;
+}
+
+.cards .card p {
+  margin: 0;
+  font-size: 14px;
+  color: #c2a7a7;
+}
+
+.cards .card h2 {
+  margin: 6px 0 0;
+  font-size: 26px;
+}
+
+/* 🎨 CARD COLORS */
+.card.blue { background: #eaf0ff; }
+.card.yellow { background: #fff4cc; }
+.card.green { background: #e7f8ef; }
+.card.red { background: #ffe5e5; }
+
+/* 📋 TABLE */
+.tableBox {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.tableBox h3 {
+  margin-top: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+table th {
+  background: #f2f2f2;
+}
+
+/* 🪟 MODAL */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 320px;
+}
+
+.closeBtn {
+  margin-top: 10px;
+  padding: 8px 14px;
+  border: none;
+  background: #608ab4d0;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 900px) {
+  .cards {
+    overflow-x: auto;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+}
+/* HAMBURGER BUTTON */
+.hamburger-btn {
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 2000;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;   /* ❌ hidden by default */
+  width: 260px;
+  height: 100vh;
+  background: #cfd4db;
+  color: rgb(48, 40, 40);
+  padding: 20px;
+  transition: left 0.3s ease;
+  z-index: 1500;
+}
+
+/* ✅ WHEN OPEN */
+.sidebar.open {
+  left: 0;
+}
+
+/* Sidebar content */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 12px 0;
+  cursor: pointer;
+}
+
+/* PAGE SHIFT when sidebar open */
+.app-root {
+  transition: margin-left 0.3s ease;
+}
