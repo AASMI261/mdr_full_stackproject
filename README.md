@@ -1,70 +1,183 @@
-# Getting Started with Create React App
+# 🏥 PathoTrace 
+### AI-Powered MDR Infection Tracing & Intelligent Hospital Surveillance System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="left">
+  <img alt="Status" src="https://img.shields.io/badge/status-prototype-blue" />
+  <img alt="License" src="https://img.shields.io/badge/license-academic-lightgrey" />
+  <img alt="Stack" src="https://img.shields.io/badge/stack-React%20%7C%20Node%20%7C%20Postgres%20%7C%20Kafka%20%7C%20Azure-blueviolet" />
+</p>
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📖 Overview
+**PathoTrace SafeWard** is a scalable, cloud-native healthcare intelligence system designed to **detect, trace, and contain Multidrug-Resistant (MDR) infections** in hospitals.
 
-### `npm start`
+It combines **real-time data streaming, graph-based contact tracing, and AI-powered multilingual voice interaction** to enable faster outbreak response, improved patient communication, and enhanced infection control workflows.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚨 Problem Statement
+Hospitals face critical challenges in managing MDR infections:
 
-### `npm test`
+- ⏱ Manual contact tracing leads to **delayed detection and response**
+- 📈 MDR infection rates are **increasing rapidly**
+- 🕵️ Silent carriers remain **undetected at admission**
+- 🔄 Lack of real-time systems causes **uncontrolled spread**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 💡 Proposed Solution
+PathoTrace SafeWard provides a **real-time, automated MDR tracing ecosystem** that:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Digitizes and automates contact tracing  
+- Uses AI for early detection and outbreak analysis  
+- Enables voice-based patient interaction  
+- Eliminates language barriers with multilingual processing  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ⭐ Key Features
 
-### `npm run eject`
+### 🔗 Dynamic Contact Tree Mapping
+- Generates **live exposure graphs**
+- Tracks:
+  - Primary (doctors, nurses)
+  - Secondary (staff)
+  - Tertiary (visitors)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🧬 Source Linkage Graph with Timeline
+- Identifies **infection origin**
+- Builds **timestamped outbreak pathways**
+- Highlights weak infection control points
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 🎤 Voice-Driven Contact Screening Bot (Contact Tracing Integrated)
+- Automatically triggered when exposure is detected
+- Calls **primary, secondary, tertiary contacts**
+- Collects:
+  - Symptoms (fever, cough, etc.)
+  - Interaction history
+  - Exposure confirmation
+- Converts voice → text and stores data
+- Provides:
+  - Alerts
+  - Medical guidance
 
-## Learn More
+👉 All responses are **saved in the web system/database**, helping doctors monitor patients and take faster decisions
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 🌐 Multilingual AI Communication System
+- Accepts input in **regional languages (Gujarati, Hindi, etc.)**
+- Performs:
+  - Speech-to-text conversion
+  - Language detection
+  - Translation to English
+- Responds back in **patient’s language**
 
-### Code Splitting
+👉 Ensures **inclusive healthcare communication**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+### 🧠 AI-Based Early Recovery Analysis
+- Predicts recovery trends
+- Identifies high-risk patients
+- Supports early medical decisions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🏗️ System Architecture
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 🔹 Tech Stack
 
-### Advanced Configuration
+| Layer            | Technology |
+|------------------|-----------|
+| Frontend         | React.js |
+| Backend          | Node.js |
+| Database         | PostgreSQL (Neon) |
+| Real-Time Stream | Apache Kafka |
+| Voice Bot        | Twilio + Azure Speech-to-Text |
+| AI Services      | Azure Cognitive Services |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+### 🔹 High-Level Flow
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 🔄 Workflow
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Patient speaks in any language  
+2. Speech converted to text  
+3. Language detected & translated to English (to understand the doctor)
+4. AI processes symptoms
+5. Saves the patient data
+6. Contact tracing graph updates
+7. source linkage graph update 
+8. Voice bot calls exposed individuals  
+9. Responses stored in database  
+10. Doctors access data via web system  
+
+---
+
+## ⚙️ Getting Started
+
+### Prerequisites
+- Node.js (v18+)
+- PostgreSQL / Neon
+- Apache Kafka
+- Twilio Account
+- Azure Speech & Cognitive Services
+
+---
+
+### Installation
+
+```bash
+https://github.com/AASMI261/mdr_full_stackproject.git
+cd temp/temp/Aasmi
+npm install
+
+.env
+PORT=5000
+DATABASE_URL=your_postgres_url
+TWILIO_SID=your_sid
+TWILIO_AUTH=your_auth_token
+AZURE_SPEECH_KEY=your_key
+AZURE_REGION=your_region
+
+Run Project
+npm start
+```
+
+### Feasibility
+Real-time tracking using streaming systems
+Mature AI and NLP technologies
+Scalable cloud deployment
+Easy API integration with hospital systems
+
+### Challenges
+Data privacy (HIPAA, GDPR)
+Integration with hospital systems
+Handling accents and languages
+Avoiding false positives
+Infrastructure cost
+### Impact
+Faster outbreak detection
+Real-time infection tracking
+Reduced manual workload
+Early detection of silent carriers
+### Benefits
+Reduces MDR spread
+Improves patient safety
+Saves time and resources
+Supports scalable deployment
+Builds trust with stakeholders
+###Future Enhancements
+Doctor/Admin dashboard
+Advanced ML predictions
+Wearable device integration
+Advanced visualization
